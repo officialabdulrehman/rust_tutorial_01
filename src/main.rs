@@ -12,6 +12,27 @@ fn main() {
     println!("{}", int_input + 1);
     println!("{}", input);
     hello();
+
+    let cond: bool = 2 == 2;
+    println!("{}", cond);
+    if cond {
+        println!("{}", cond);
+    } else {
+        println!("{}", cond);
+    }
+
+    let cond2: bool = cond && false;
+    if cond2 {
+        println!("Cond2 is true");
+    } else {
+        println!("Cond2 is false");
+    }
+
+    if (cond2 && cond) || true {
+        println!("composite if is true");
+    } else {
+        println!("composite if is false");
+    }
 }
 
 fn hello() {

@@ -1,23 +1,19 @@
+use std::io;
+
 fn main() {
-    let x: i32 = 4;
-    println!("x is: {}", x);
-    let mut x: i32 = 5;
-    println!("x is: {}", x);
-    x = 9;
-    println!("x is: {}", x);
-    let x: i32 = 20;
-    println!("x is: {}", x);
+    println!("Hello World!");
+    let mut input: String = String::new();
 
-    // learning
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
 
-    let floating_point: f64 = 10.00;
-    let letter: char = ';';
-    let boolean: bool = true;
+    let int_input: i64 = input.trim().parse().unwrap();
+    println!("{}", int_input + 1);
+    println!("{}", input);
+    hello();
+}
 
-    let tup: (i32, bool, char) = (1, true, 'a');
-
-    println!("{}", tup.1);
-
-    let array: [i32; 5] = [1, 2, 3, 4, 5];
-    println!("{} {}", array[0], array[1])
+fn hello() {
+    println!("Hello there")
 }

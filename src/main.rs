@@ -41,6 +41,15 @@ fn main() {
         x + 5
     };
     println!("this is so weird {}", weird);
+
+    let less_weird = return_sum(5, 5);
+    println!("this is less weird {}", less_weird);
+
+    let normal = return_sum_v2(5, 5);
+    println!("this is normal {}", normal);
+
+    let normal_v2 = return_sum_v3(5, 5);
+    println!("this is normal_v2 {}", normal_v2);
 }
 
 fn hello() {
@@ -49,4 +58,17 @@ fn hello() {
 
 fn print_the_sum(x: i32, y: i32) {
     println!("The sum is = {}", x + y)
+}
+
+fn return_sum(x: i32, y: i32) -> i32 {
+    x + y
+}
+
+fn return_sum_v2(x: i32, y: i32) -> i32 {
+    return x + y;
+}
+
+fn return_sum_v3(x: i32, y: i32) -> i32 {
+    let result: i32 = x + y;
+    return result;
 }
